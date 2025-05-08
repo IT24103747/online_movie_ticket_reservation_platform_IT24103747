@@ -1,12 +1,12 @@
 /* ===== Base Styles ===== */
 :root {
-    --primary-color: #4361ee;
+    --primary-color: #162983;
     --primary-dark: #3a56d4;
     --secondary-color: #3f37c9;
     --accent-color: #4895ef;
     --light-color: #f8f9fa;
     --dark-color: #212529;
-    --gray-color: #6c757d;
+    --gray-color: #1b1919;
     --success-color: #4bb543;
     --error-color: #ff3333;
     --border-radius: 12px;
@@ -22,7 +22,7 @@
 
 body {
     font-family: "Sofia", sans-serif;
-    background: url('https://static.vecteezy.com/system/resources/previews/011/508/381/original/movie-film-banner-design-template-cinema-background-concept-cinema-concept-with-popcorn-filmstrip-and-film-clapper-on-yellow-background-illustration-free-vector.jpg') center/cover no-repeat fixed;
+    background: url('https://entrepreneurship.babson.edu/wp-content/uploads/2020/10/Movie-1200-630.jpg') center/cover no-repeat fixed;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -41,7 +41,7 @@ body {
 
 .login-container,
 .signup-container {
-    background: #B3A4B8;
+    background: rgba(179, 164, 184, 0.58);
     backdrop-filter: blur(10px);
     border-radius: var(--border-radius);
     box-shadow: var(--box-shadow);
