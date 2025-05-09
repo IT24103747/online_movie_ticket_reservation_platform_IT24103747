@@ -184,7 +184,7 @@ body {
 }
 
 .remember-me input[type="checkbox"]:checked::after {
-    content: '✓';
+    content: '\2713';
     position: absolute;
     color: white;
     font-size: 0.7rem; /* Reduced from 0.8rem */
