@@ -45,10 +45,11 @@ public class MovieService {
         for (int i = 0; i < movies.size(); i++) {
             if (movies.get(i).getId().equals(updatedMovie.getId())) {
                 movies.set(i, updatedMovie);
-                FileService.saveMovies(movies);
+                FileService.saveMovies(movies); // Persist to file
                 return;
             }
         }
+        throw new IllegalArgumentException("Movie not found with ID: " + updatedMovie.getId());
     }
 
     public void deleteMovie(String id) throws IOException {
