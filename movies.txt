@@ -1,6 +1,0 @@
-f696e0da-f345-49c6-9f51-d798d794a2c7,Test movie 2,test,2025-05-31,true
-f64cddd8-001f-4a21-8128-7fa319a54505,Test Movie 1,teat,2025-05-21,true
-853e0f3f-95f9-4489-b49c-825186e688cb,Test movie 3,test,2025-05-23,true
-dc55cc42-5527-494a-bfad-2334bacc9d44,Test movie 4,test,2025-05-14,true
-debe9e6a-11f5-48e7-9e3e-040e7f7482f5,Test movie 5,test,2025-05-14,false
-d179cdf6-fc5e-4738-8751-87fcb96204ca,Test movie 6,test,2025-05-21,true

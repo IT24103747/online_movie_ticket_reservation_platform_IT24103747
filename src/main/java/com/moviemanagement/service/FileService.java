@@ -22,8 +22,9 @@ public class FileService {
         List<String> lines = movies.stream()
                 .map(Movie::toString)
                 .collect(Collectors.toList());
-        Files.write(Paths.get(FILE_PATH), lines,
-                StandardOpenOption.CREATE,
+
+        Path path = Paths.get(FILE_PATH);
+        Files.write(path, lines, StandardOpenOption.CREATE,
                 StandardOpenOption.TRUNCATE_EXISTING);
     }
 
@@ -32,8 +33,20 @@ public class FileService {
         if (!Files.exists(path)) {
             return new ArrayList<>();
         }
-        return Files.lines(path)
-                .map(Movie::fromString)
-                .collect(Collectors.toList());
+
+        try (Stream<String> lines = Files.lines(path)) {
+            return lines
+                    .filter(line -> !line.trim().isEmpty())
+                    .map(line -> {
+                        try {
+                            return Movie.fromString(line);
+                        } catch (Exception e) {
+                            System.err.println("Skipping invalid movie record: " + line);
+                            return null;
+                        }
+                    })
+                    .filter(Objects::nonNull)
+                    .collect(Collectors.toList());
+        }
     }
 }
