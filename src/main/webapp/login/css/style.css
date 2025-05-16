@@ -29,7 +29,7 @@ body {
     min-height: 100vh;
     padding: 1rem;
     line-height: 1.6;
-    color: var(--dark-color);
+    color:black;
 }
 
 /* ===== Auth Container ===== */
@@ -40,7 +40,8 @@ body {
 }
 
 .login-container,
-.signup-container {
+.signup-container,
+.forgot-password-container {
     background: rgba(179, 164, 184, 0.58);
     backdrop-filter: blur(10px);
     border-radius: var(--border-radius);
@@ -54,14 +55,16 @@ body {
 }
 
 .login-container:hover,
-.signup-container:hover {
+.signup-container:hover,
+.forgot-password-container:hover {
     transform: translateY(-5px);
     box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
 }
 
 /* Decorative elements */
 .login-container::before,
-.signup-container::before {
+.signup-container::before,
+.forgotPassword-container::before {
     content: '';
     position: absolute;
     top: -50%;
@@ -325,7 +328,8 @@ body {
 }
 
 .login-container,
-.signup-container {
+.signup-container,
+.forgot-password-container {
     animation: fadeIn 0.6s ease-out forwards;
 }
 
@@ -336,6 +340,7 @@ body {
 }
 
 .auth-container:hover .login-container,
-.auth-container:hover .signup-container {
+.auth-container:hover .signup-container,
+.auth-container:hover .forgot-password-container {
     animation: float 3s ease-in-out infinite;
 }
