@@ -7,7 +7,7 @@ import java.util.*;
 import java.util.stream.*;
 
 public class FileService {
-    private static final String DATA_DIR = "C:\\online_movie_ticket_reservation_platform\\";
+    private static final String DATA_DIR = "C:\\online_movie_ticket_reservation_platform_IT24103747\\data\\";
     private static final String FILE_PATH = DATA_DIR + "movies.txt";
 
     static {
