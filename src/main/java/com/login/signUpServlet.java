@@ -10,10 +10,10 @@ import java.util.ArrayList;
 import java.util.List;
 
 @WebServlet("/signup")
-public class signUpServelet extends HttpServlet {
+public class signUpServlet extends HttpServlet {
 
     // constructor
-    public signUpServelet() {
+    public signUpServlet() {
 
     }
 

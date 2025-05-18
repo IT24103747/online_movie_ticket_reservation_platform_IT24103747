@@ -6,7 +6,7 @@ import javax.servlet.http.*;
 import java.io.*;
 
 @WebServlet("/login")
-public class LoginServelet extends HttpServlet {
+public class LoginServlet extends HttpServlet {
 
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         // Get credentials from request
