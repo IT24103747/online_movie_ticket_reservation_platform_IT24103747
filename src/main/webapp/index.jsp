@@ -1,50 +1,57 @@
+<%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login Page</title>
-    <link rel="stylesheet" href="login/css/style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+    <title>Theatre Management System</title>
+    <link rel="stylesheet" href="theatre.css">
 </head>
 <body>
-<div class="auth-container">
-    <!-- Logo Section -->
-    <div class="logo-container" style="text-align: center; margin-bottom: 20px;">
+<div class="container">
+    <header>
+        <h1>Theatre Management System</h1>
+        <nav>
+            <ul>
+                <li><a href="#" id="viewTheatres">View Theatres</a></li>
+                <li><a href="#" id="addTheatre">Add Theatre</a></li>
+            </ul>
+        </nav>
+    </header>
 
-    </div>
+    <main>
+        <section id="theatreListSection" class="active">
+            <h2>Theatre List</h2>
+            <div id="theatreList"></div>
+        </section>
 
-    <div class="login-container" id="loginContainer">
-        <h1>Login</h1>
-
-        <form id="loginForm">
-            <div class="input-group">
-                <label for="username">Username</label>
-                <input type="text" id="username" name="username" required>
-            </div>
-
-            <div class="input-group">
-                <label for="password">Password</label>
-                <input type="password" id="password" name="password" required>
-            </div>
-
-            <div class="options">
-                <div class="remember-me">
-                    <input type="checkbox" id="remember" name="remember">
-                    <label for="remember">Remember Me</label>
+        <section id="addTheatreSection">
+            <h2>Add New Theatre</h2>
+            <form id="theatreForm">
+                <input type="hidden" id="theatreId">
+                <div class="form-group">
+                    <label for="name">Theatre Name:</label>
+                    <input type="text" id="name" name="name" required>
                 </div>
-                <a href="forgotPassword.jsp" class="forgot-password">Forget Password</a>
-            </div>
-
-            <button type="submit" class="auth-button">Login</button>
-        </form>
-
-        <div class="switch-auth">
-            Don't have an account? <a href="signup.jsp" class="switch-link">Sign Up</a>
-        </div>
-    </div>
+                <div class="form-group">
+                    <label for="location">Location:</label>
+                    <input type="text" id="location" name="location" required>
+                </div>
+                <div class="form-group">
+                    <label for="capacity">Capacity:</label>
+                    <input type="number" id="capacity" name="capacity" required>
+                </div>
+                <div class="form-group">
+                    <label for="screens">Number of Screens:</label>
+                    <input type="number" id="screens" name="screens" required>
+                </div>
+                <button type="submit" id="saveBtn">Save Theatre</button>
+                <button type="button" id="cancelBtn">Cancel</button>
+            </form>
+        </section>
+    </main>
 </div>
 
-<script src="login/js/script.js"></script>
+<script src="theatre.js"></script>
 </body>
 </html>

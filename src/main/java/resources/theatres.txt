@@ -1,0 +1,2 @@
+1eb8a9d4-8a7a-42a1-9e3a-7d8c3b2a1f0d|Grand Theatre|Downtown|500|5
+2f7b9e5c-6d4e-3f2a-1b9c-8e7f6a5b4c3d|Cineplex|Midtown|300|3
