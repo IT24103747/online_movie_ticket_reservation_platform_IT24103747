@@ -11,13 +11,16 @@
 <div class="auth-container">
     <!-- Logo Section -->
     <div class="logo-container" style="text-align: center; margin-bottom: 20px;">
-
+        <!-- You can add your logo here -->
     </div>
 
     <div class="login-container" id="loginContainer">
         <h1>Login</h1>
 
-        <form id="loginForm">
+        <!-- Display error message if any -->
+        <div id="errorMessage" class="error-message" style="display: none; color: red; margin-bottom: 15px;"></div>
+
+        <form id="loginForm" action="signing" method="POST" onsubmit="return validateForm()">
             <div class="input-group">
                 <label for="username">Username</label>
                 <input type="text" id="username" name="username" required>
@@ -33,7 +36,7 @@
                     <input type="checkbox" id="remember" name="remember">
                     <label for="remember">Remember Me</label>
                 </div>
-                <a href="forgotPassword.jsp" class="forgot-password">Forget Password</a>
+                <a href="forgotPassword.jsp" class="forgot-password">Forgot Password</a>
             </div>
 
             <button type="submit" class="auth-button">Login</button>
@@ -45,6 +48,33 @@
     </div>
 </div>
 
-<script src="login/js/script.js"></script>
+<script>
+    function validateForm() {
+        const username = document.getElementById('username').value.trim();
+        const password = document.getElementById('password').value.trim();
+        const errorElement = document.getElementById('errorMessage');
+
+        // Basic validation
+        if (username === '' || password === '') {
+            errorElement.textContent = 'Please fill in all fields';
+            errorElement.style.display = 'block';
+            return false;
+        }
+
+        // You can add more validation here if needed
+        // For example, password length requirements
+
+        return true; // Form will submit if validation passes
+    }
+
+    // Clear error message when user starts typing
+    document.getElementById('username').addEventListener('input', function() {
+        document.getElementById('errorMessage').style.display = 'none';
+    });
+
+    document.getElementById('password').addEventListener('input', function() {
+        document.getElementById('errorMessage').style.display = 'none';
+    });
+</script>
 </body>
 </html>
